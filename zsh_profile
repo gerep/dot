@@ -15,11 +15,6 @@ export GOPRIVATE="github.com/moov-io/*,github.com/moovfinancial/*"
 # Still need to figure out how to make it work by holding the key
 setxkbmap -option caps:backspace
 
-# Tilix VTE issue fix
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
-fi
-
 function dc-log() {
 	docker-compose logs -f "$1" | humanlog;
 }
