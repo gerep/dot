@@ -1,0 +1,25 @@
+alias vim="nvim"
+
+export EDITOR="nvim"
+
+# Golang
+export PATH=$PATH:/usr/local/go/bin
+
+# Binaries
+export PATH=$PATH:/$HOME/.local/bin
+export PATH=$PATH:/$HOME/go/bin
+
+export GOPRIVATE="github.com/moov-io/*,github.com/moovfinancial/*"
+
+# Capslock to act as backspace;
+# Still need to figure out how to make it work by holding the key
+setxkbmap -option caps:backspace
+
+# Tilix VTE issue fix
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+
+function dc-log() {
+	docker-compose logs -f "$1" | humanlog;
+}
