@@ -9,12 +9,6 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/$HOME/.local/bin
 export PATH=$PATH:/$HOME/go/bin
 
-export GOPRIVATE="github.com/moov-io/*,github.com/moovfinancial/*"
-
 # Capslock to act as backspace;
 # Still need to figure out how to make it work by holding the key
 setxkbmap -option caps:backspace
-
-function dc-log() {
-	docker-compose logs -f "$1" | humanlog;
-}
