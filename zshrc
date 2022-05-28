@@ -14,4 +14,3 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 source $HOME/.zsh_profile
-source $HOME/.zsh_work
