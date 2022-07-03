@@ -66,3 +66,5 @@ let-env PATH = ($env.PATH | append '$HOME/go/bin')
 # Binaries
 let-env PATH = ($env.PATH | append '$HOME/.local/bin')
 let-env PATH = ($env.PATH | append '$HOME/.cargo/bin')
+
+let-env EDITOR = "hx"
