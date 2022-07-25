@@ -4,6 +4,7 @@
 
 # Golang
 export PATH=$PATH:/usr/local/go/bin
+export GOBIN=$HOME/go/bin
 
 # Binaries
 export PATH=$PATH:$HOME/.local/bin
@@ -11,9 +12,10 @@ export PATH=$PATH:$HOME/go/bin
 
 export EDITOR=hx
 
-# Autocomplete
-bind 'set show-all-if-ambiguous on'
-bind 'TAB:menu-complete'
+export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+
+alias hx="helix"
+alias ..="cd .."
 
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
   ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
